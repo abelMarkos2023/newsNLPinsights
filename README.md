@@ -59,7 +59,8 @@ We're ready to go! The API has a lot of different endpoints you can take a look 
 
 Once you are hooked up to the textRazor API, you are most of the way there!
 
-## serviceWorker has been configuered successfully
+## ServiceWorker has been configuered successfully
+## All test passed Successfully
 
 
 ## The Production Build Command
