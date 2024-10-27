@@ -4,29 +4,30 @@ import { checkTheURL } from './urlChecker'
 // const serverURL = 'https://wfkdhyvtzx.prod.udacity-student-workspaces.com/api'
 const serverURL = 'http://localhost:8000/api'
 
+document.addEventListener('load', function(){
 
+    
 const form = document.getElementById('urlForm');
 const result = document.getElementById('results');
 
-// async function fetchArticleText(url) {
-//     const { data } = await axios.get(url);
-//     const $ = cheerio.load(data);
-//     return $('body').text(); // Adjust selector to get the main content
-// }
+if (form){
+    form.addEventListener('submit', handleSubmit)
+}
 
-form.addEventListener('submit', handleSubmit);
+
+})
 
 function handleSubmit(event) {
     event.preventDefault();
 
     // Get the URL from the input field
-    const formText = document.getElementById('name').value;
+    const formText = document.getElementById('name');
 
     
     
     // Check if the URL is valid
 
-    if(!checkTheURL(formText)){
+    if(!checkTheURL(formText.value)){
 
         alert('Please Enter a Valid URL To Process Your Article');
         return;
@@ -35,12 +36,10 @@ function handleSubmit(event) {
         // If the URL is valid, send it to the server using the serverURL constant above
 
 
-        sendToServer(formText);
+        sendToServer(formText.value);
 
         formText.value = '';
 }
-
-//validate if the input is a valis URL 
 
 
 
@@ -120,5 +119,5 @@ async function sendToServer(input){
 }
 
 // Export the handleSubmit function
-export { handleSubmit,sendToServer };
+module.exports = {sendToServer };
 
