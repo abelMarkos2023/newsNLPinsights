@@ -1,0 +1,54 @@
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: #E6F2FF;
+}
+
+main {
+    flex: 2;
+
+    .form {
+        width: 90vw;
+        margin: 50px auto;
+    }
+    .response{
+        width: 90vw;
+        margin: 1rem auto;
+        #results{
+            margin-top: 1rem;
+            background-color: #B0D6FF;
+            color: black;
+            padding: 1rem;
+            text-align: left;
+            border-radius: 1rem;
+
+                display: grid;
+                grid-template-columns: 1fr 2fr 2fr;
+
+                gap: 20px;
+               
+                @media(width < 768px){
+                    grid-template-columns: 1fr;
+                }
+                div{
+                    display: flex;
+                    flex-direction: column;
+                    gap: 0.4rem;
+
+                    h3{
+                        font-size: 1.6rem;
+                        font-weight: bold;
+                        color: #003366;
+                    }
+                    p{
+                        font-size: 1.5rem;
+                        font-style: italic;
+                    }
+                }
+            
+        }
+    }
+}
+
+

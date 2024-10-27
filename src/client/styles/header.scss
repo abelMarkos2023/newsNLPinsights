@@ -1,0 +1,17 @@
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #1E90FF;
+    padding: 16px 40px;
+    color: white;
+
+    .logo{
+        font-size: 2.4rem;
+        font-weight: bold;
+
+    }
+    .nav{
+        font-size: 1.4rem;
+    }
+}
